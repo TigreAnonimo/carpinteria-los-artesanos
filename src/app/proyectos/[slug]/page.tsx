@@ -40,7 +40,7 @@ export default async function ProjectDetailPage({ params }: Props) {
   }
 
   return (
-    <article className="mx-auto max-w-6xl px-4 py-16 sm:px-6">
+    <article className="mx-auto max-w-7xl px-4 py-16 sm:px-6">
       <Button asChild variant="ghost" className="mb-8 -ml-2">
         <Link href="/proyectos">
           <ArrowLeft className="mr-2 h-4 w-4" aria-hidden />
@@ -49,10 +49,10 @@ export default async function ProjectDetailPage({ params }: Props) {
       </Button>
 
       <header className="max-w-3xl">
-        <p className="text-sm font-medium uppercase tracking-wider text-primary">
+        <p className="text-[0.65rem] font-semibold uppercase tracking-[0.2em] text-accent">
           {project.category} · {project.year}
         </p>
-        <h1 className="mt-2 font-serif text-4xl font-semibold tracking-tight sm:text-5xl">
+        <h1 className="mt-3 font-display text-4xl font-bold tracking-tight sm:text-5xl">
           {project.title}
         </h1>
         <p className="mt-6 text-lg leading-relaxed text-muted-foreground">
@@ -60,7 +60,7 @@ export default async function ProjectDetailPage({ params }: Props) {
         </p>
       </header>
 
-      <div className="relative mt-12 aspect-[16/9] overflow-hidden rounded-xl">
+      <div className="relative mt-12 aspect-[16/9] overflow-hidden border border-border">
         <Image
           src={project.image}
           alt={project.title}
@@ -75,7 +75,7 @@ export default async function ProjectDetailPage({ params }: Props) {
 
       <div className="mt-8 grid gap-6 sm:grid-cols-2">
         {project.gallery.map((src, i) => (
-          <div key={src} className="relative aspect-[4/3] overflow-hidden rounded-xl">
+          <div key={src} className="relative aspect-[4/3] overflow-hidden border border-border">
             <Image
               src={src}
               alt={`${project.title} — imagen ${i + 2}`}
@@ -90,12 +90,12 @@ export default async function ProjectDetailPage({ params }: Props) {
       </div>
 
       <section className="mt-16 max-w-2xl">
-        <h2 className="font-serif text-2xl font-semibold">Materiales utilizados</h2>
+        <h2 className="font-display text-2xl font-bold">Materiales utilizados</h2>
         <ul className="mt-4 space-y-2">
           {project.materials.map((material) => (
             <li
               key={material}
-              className="flex items-center gap-2 text-muted-foreground before:h-1.5 before:w-1.5 before:rounded-full before:bg-primary before:content-['']"
+              className="flex items-center gap-2 text-sm text-muted-foreground before:h-1 before:w-4 before:bg-accent before:content-['']"
             >
               {material}
             </li>

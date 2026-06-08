@@ -4,7 +4,7 @@ import { Button } from "@/components/ui/button";
 export default function ProjectNotFound() {
   return (
     <div className="mx-auto flex min-h-[50vh] max-w-lg flex-col items-center justify-center px-4 py-16 text-center">
-      <h1 className="font-serif text-3xl font-semibold">Proyecto no encontrado</h1>
+      <h1 className="font-display text-3xl font-bold">Proyecto no encontrado</h1>
       <p className="mt-4 text-muted-foreground">
         El proyecto que buscas no existe o ha sido retirado de la galería.
       </p>

@@ -6,7 +6,7 @@ import type { Project } from "@/data/projects";
 export function ProjectCard({ project }: { project: Project }) {
   return (
     <Link href={`/proyectos/${project.slug}`} className="group block h-full">
-      <Card className="h-full overflow-hidden transition-shadow hover:shadow-lg">
+      <Card className="h-full overflow-hidden rounded-none border-0 border-b bg-transparent transition-colors hover:bg-muted/30">
         <div className="relative aspect-[4/3] overflow-hidden">
           <Image
             src={project.image}
@@ -15,18 +15,20 @@ export function ProjectCard({ project }: { project: Project }) {
             sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
             placeholder="blur"
             blurDataURL={project.blurDataURL}
-            className="object-cover transition-transform duration-500 group-hover:scale-105"
+            className="object-cover transition-transform duration-700 group-hover:scale-[1.03]"
           />
         </div>
-        <CardHeader>
-          <p className="text-xs font-medium uppercase tracking-wider text-primary">
+        <CardHeader className="px-0">
+          <p className="text-[0.65rem] font-semibold uppercase tracking-[0.2em] text-accent">
             {project.category}
           </p>
-          <CardTitle className="font-serif text-xl">{project.title}</CardTitle>
-          <CardDescription>{project.description}</CardDescription>
+          <CardTitle className="font-display text-xl font-bold">{project.title}</CardTitle>
+          <CardDescription className="text-sm">{project.description}</CardDescription>
         </CardHeader>
-        <CardContent>
-          <p className="text-sm text-muted-foreground">{project.year}</p>
+        <CardContent className="px-0 pb-6">
+          <p className="text-xs font-medium uppercase tracking-wider text-muted-foreground">
+            {project.year}
+          </p>
         </CardContent>
       </Card>
     </Link>

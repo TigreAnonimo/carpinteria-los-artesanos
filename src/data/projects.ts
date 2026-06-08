@@ -1,3 +1,5 @@
+import { projectImage } from "@/lib/images";
+
 export type Project = {
   slug: string;
   title: string;
@@ -21,12 +23,8 @@ export const projects: Project[] = [
     description: "Mesa comedor de 2.4 m con patas torneadas y acabado aceite-cera natural.",
     longDescription:
       "Diseñada para un comedor familiar en Madrid, esta mesa combina tablones de roble europeo seleccionado a mano con uniones tradicionales. El acabado en aceite-cera realza la veta sin ocultar el carácter del material.",
-    image:
-      "https://images.unsplash.com/photo-1615066398481-cf8e86fbf3a0?w=1200&q=80",
-    gallery: [
-      "https://images.unsplash.com/photo-1615066398481-cf8e86fbf3a0?w=1600&q=85",
-      "https://images.unsplash.com/photo-1615873964213-48ffedbc9a9e?w=1600&q=85",
-    ],
+    image: projectImage("mesa-roble-macizo"),
+    gallery: [projectImage("mesa-roble-macizo"), projectImage("mesa-roble-macizo-2")],
     materials: ["Roble europeo macizo", "Aceite-cera natural", "Uniones espiga y cola"],
     category: "Muebles a medida",
     year: 2025,
@@ -38,12 +36,8 @@ export const projects: Project[] = [
     description: "Biblioteca empotrada y revestimiento en nogal para loft de 120 m².",
     longDescription:
       "Proyecto integral de carpintería para un loft en Barcelona: biblioteca a medida de suelo a techo, panelados en nogal americano y puertas correderas ocultas que maximizan la luz natural.",
-    image:
-      "https://images.unsplash.com/photo-1616486338812-3dadae4b4ace?w=1200&q=80",
-    gallery: [
-      "https://images.unsplash.com/photo-1616486338812-3dadae4b4ace?w=1600&q=85",
-      "https://images.unsplash.com/photo-1618221197160-0e32a4f0f38e?w=1600&q=85",
-    ],
+    image: projectImage("reforma-loft"),
+    gallery: [projectImage("reforma-loft"), projectImage("reforma-loft-2")],
     materials: ["Nogal americano", "Herrajes ocultos Blum", "Laca mate al agua"],
     category: "Carpintería estructural",
     year: 2024,
@@ -55,12 +49,8 @@ export const projects: Project[] = [
     description: "Recuperación de estructura de haya y tapizado en lino orgánico.",
     longDescription:
       "Intervención conservativa sobre un sillón isabelino: consolidación de la estructura de haya, sustitución selectiva de piezas dañadas y tapizado artesanal en lino teñido con pigmentos naturales.",
-    image:
-      "https://images.unsplash.com/photo-1555041469-a586c61ea9bc?w=1200&q=80",
-    gallery: [
-      "https://images.unsplash.com/photo-1555041469-a586c61ea9bc?w=1600&q=85",
-      "https://images.unsplash.com/photo-1586023492125-27b2c045efd7?w=1600&q=85",
-    ],
+    image: projectImage("restauracion-sillon"),
+    gallery: [projectImage("restauracion-sillon"), projectImage("restauracion-sillon-2")],
     materials: ["Haya europea", "Cola animal", "Lino orgánico teñido"],
     category: "Restauración",
     year: 2024,
@@ -72,12 +62,8 @@ export const projects: Project[] = [
     description: "Mobiliario bajo y alto con encimera de roble ahumado y tiradores de latón.",
     longDescription:
       "Cocina a medida para vivienda unifamiliar: frentes en cerezo claro, encimera maciza de roble ahumado y cajones con sistema soft-close. Diseño pensado para envejecer con dignidad.",
-    image:
-      "https://images.unsplash.com/photo-1556912173-46c336c3fd55?w=1200&q=80",
-    gallery: [
-      "https://images.unsplash.com/photo-1556912173-46c336c3fd55?w=1600&q=85",
-      "https://images.unsplash.com/photo-1556909114-f6e7ad7d3136?w=1600&q=85",
-    ],
+    image: projectImage("cocina-cerezo"),
+    gallery: [projectImage("cocina-cerezo"), projectImage("cocina-cerezo-2")],
     materials: ["Cerezo americano", "Roble ahumado", "Latón cepillado"],
     category: "Muebles a medida",
     year: 2025,
@@ -89,12 +75,8 @@ export const projects: Project[] = [
     description: "Puerta maciza de doble hoja con herrajes de forja artesanal.",
     longDescription:
       "Puerta de acceso principal fabricada en roble macizo de 60 mm de espesor, con refuerzos interiores ocultos y herrajes de forja diseñados a medida. Aislamiento térmico integrado sin comprometer la estética.",
-    image:
-      "https://images.unsplash.com/photo-1600585154340-be6161a56a0c?w=1200&q=80",
-    gallery: [
-      "https://images.unsplash.com/photo-1600585154340-be6161a56a0c?w=1600&q=85",
-      "https://images.unsplash.com/photo-1600607687939-ce8a6c25118c?w=1600&q=85",
-    ],
+    image: projectImage("puerta-roble"),
+    gallery: [projectImage("puerta-roble"), projectImage("puerta-roble-2")],
     materials: ["Roble macizo 60 mm", "Forja artesanal", "Junta perimetral"],
     category: "Carpintería estructural",
     year: 2023,
@@ -106,12 +88,8 @@ export const projects: Project[] = [
     description: "Escritorio minimalista con cajón oculto y patas de acero negro.",
     longDescription:
       "Pieza de autor para estudio creativo: tablero de nogal con canto vivo, cajón push-to-open y estructura en acero negro mate. Acabado satinado resistente al uso diario.",
-    image:
-      "https://images.unsplash.com/photo-1595515106969-1ce577c1b9f0?w=1200&q=80",
-    gallery: [
-      "https://images.unsplash.com/photo-1595515106969-1ce577c1b9f0?w=1600&q=85",
-      "https://images.unsplash.com/photo-1518455027359-f3f8164ba6bd?w=1600&q=85",
-    ],
+    image: projectImage("escritorio-nogal"),
+    gallery: [projectImage("escritorio-nogal"), projectImage("escritorio-nogal-2")],
     materials: ["Nogal americano", "Acero negro mate", "Barniz poliuretano satinado"],
     category: "Muebles a medida",
     year: 2025,

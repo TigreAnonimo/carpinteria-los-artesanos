@@ -17,7 +17,7 @@ export default function Error({
 
   return (
     <div className="mx-auto flex min-h-[60vh] max-w-lg flex-col items-center justify-center px-4 py-16 text-center">
-      <h1 className="font-serif text-3xl font-semibold">Algo ha salido mal</h1>
+      <h1 className="font-display text-3xl font-bold">Algo ha salido mal</h1>
       <p className="mt-4 text-muted-foreground">
         Ha ocurrido un error inesperado. Puedes reintentar o volver al inicio.
       </p>

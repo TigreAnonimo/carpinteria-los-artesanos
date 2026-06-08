@@ -1,19 +1,19 @@
 import type { Metadata } from "next";
-import { headers } from "next/headers";
-import { Playfair_Display, Source_Sans_3 } from "next/font/google";
+import { IBM_Plex_Sans, Syne } from "next/font/google";
 import { Header } from "@/components/layout/header";
 import { Footer } from "@/components/layout/footer";
 import "./globals.css";
 
-const playfair = Playfair_Display({
+const syne = Syne({
   subsets: ["latin"],
-  variable: "--font-playfair",
+  variable: "--font-syne",
   display: "swap",
 });
 
-const sourceSans = Source_Sans_3({
+const ibmPlex = IBM_Plex_Sans({
   subsets: ["latin"],
-  variable: "--font-geist-sans",
+  weight: ["400", "500", "600"],
+  variable: "--font-ibm",
   display: "swap",
 });
 
@@ -44,13 +44,10 @@ export default async function RootLayout({
 }: Readonly<{
   children: React.ReactNode;
 }>) {
-  const headersList = await headers();
-  const pathname = headersList.get("x-pathname") ?? "/";
-
   return (
-    <html lang="es" className={`${playfair.variable} ${sourceSans.variable}`}>
+    <html lang="es" className={`${syne.variable} ${ibmPlex.variable}`}>
       <body className="min-h-screen font-sans antialiased">
-        <Header pathname={pathname} />
+        <Header />
         <main>{children}</main>
         <Footer />
       </body>

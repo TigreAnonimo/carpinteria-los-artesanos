@@ -50,7 +50,7 @@ export default function HomePage() {
       <section className="border-b border-border">
         <div className="mx-auto grid max-w-7xl lg:grid-cols-2">
           <div className="flex flex-col justify-center px-4 py-20 sm:px-6 lg:py-28">
-            <p className="section-label">Carpintería artesanal · Madrid</p>
+            <p className="section-label">Carpintería artesanal · Barcelona</p>
             <h1 className="mt-6 max-w-xl font-display text-4xl font-bold leading-[1.1] tracking-tight sm:text-5xl lg:text-6xl">
               Madera con alma, oficio con precisión
             </h1>
